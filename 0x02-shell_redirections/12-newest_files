@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -n 10 lt
+ls -n 10 lt | sort

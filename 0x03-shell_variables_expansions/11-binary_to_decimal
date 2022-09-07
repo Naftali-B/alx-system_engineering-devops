@@ -1,2 +1,2 @@
 #!/bin/bash
-$BINARY dec2bin ('')
+echo $((2#$BINARY))

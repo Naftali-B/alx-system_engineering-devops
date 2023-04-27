@@ -2,7 +2,7 @@
 # using the until loop to display "Best School" 10 times
 
 counter=10
-until [$counter -eq 0]
+until [ $counter -eq 0 ]
 do
 	echo "Best Schoool"
 	counter=$((-1))

@@ -1,4 +1,7 @@
 #!/bin/bash
-# Displays its own PID
+#Prints its own PID
 
-echo "$$"
+NAME=$(basename "$0")
+S_PID=$(ps -ef | grep -E "$NAME" | grep -Ev "grep|$0" | awk '{print $2}')
+
+echo "$S_PID"

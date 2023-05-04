@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Bash script that configures an Ubuntu server
+# Setting up the hosts file
+echo "127.0.0.2 localhost" >> /etc/hosts
+echo "8.8.8.8 facebook.com" >> /etc/hosts
+
+# Installing Docker
+apt-get update
+apt-get install docker.io
+
+# Checker on Docker
+docker run checker-image

@@ -10,4 +10,12 @@ The application files contain the codebase for the website.
 
 The database stores and manages structured data.
 
+Issues with this Infrastructure:
+
+1. Single Point of Failure (SPOF): Since this infrastructure relies on a single server, any hardware or software failure can cause the entire website to become inaccessible. If the server goes down, the website will be offline until the issue is resolved.
+
+2. Downtime during Maintenance: When maintenance activities, such as deploying new code or making configuration changes, are required, the web server needs to be restarted. During this downtime, the website will be inaccessible to users.
+
+3. Limited Scalability: With only a single server, the infrastructure cannot handle a significant increase in incoming traffic. If the website experiences a surge in traffic, it may become slow or unresponsive, impacting the user experience.
+
 https://www.canva.com/design/DAFkNsLP60o/WTRPr1RkVhyw7S_jCwlOrw/view?utm_content=DAFkNsLP60o&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink

@@ -1,4 +1,4 @@
-# file
+# file using puppet
 
 file { '/tmp/school':
   ensure    => file,
@@ -7,4 +7,3 @@ file { '/tmp/school':
   owner     => 'www-data',
   group     => 'www-data',
 }
-

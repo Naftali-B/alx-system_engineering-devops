@@ -1,4 +1,4 @@
-# installs puppet-lint when run 
+# when run, it installs puppet-lint
 
 package { 'puppet-lint':
     ensure   => '2.1.1',

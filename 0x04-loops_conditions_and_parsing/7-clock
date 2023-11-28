@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# a Bash script that displays the time for 12 hours and 59 minutes
+# must use the while loop (for and until are forbidden)
+
+h=0
+
+while [ $h -lt 12 ]; do
+    echo "Hour: $h"
+    
+    m=1
+    while [ $m -le 59 ]; do
+        echo "$minute"
+        ((m++))
+    done
+    
+    ((h++))
+done

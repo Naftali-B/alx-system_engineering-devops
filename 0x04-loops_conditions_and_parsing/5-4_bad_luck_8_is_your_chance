@@ -6,6 +6,7 @@
 # must use the while loop
 # must use the if, elif and else statements
 
+n=0
 while [ $n -le 10 ]; do
     if [ $n -eq 4 ]; then
         echo "bad luck"

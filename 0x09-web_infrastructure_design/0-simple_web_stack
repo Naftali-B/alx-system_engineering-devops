@@ -1,12 +1,10 @@
 https://drive.google.com/file/d/1Rj5GgrJWWc23qNBVelymt2V9mU8Ca-Oi/view?usp=sharing
 
-The user wants to access the website www.foobar.com.
-
-The DNS (Domain Name System) translates the domain name to IP addresses 8.8.8.8
+The user wants to access the website www.foobar.com and so types the same on their browser. If previously accessed, the browser or the operating system cached the exact ip address that this user friendly www.foobar.com name points to, otherwise the DNS (Domain Name System) translates the domain name to IP address like 8.8.8.8
 
 The web server handles HTTP requests and serves web pages.
 
-The application server executes the codebase and generates content.
+The application server executes the codebase and business logic that generates content.
 
 The application files contain the codebase for the website.
 

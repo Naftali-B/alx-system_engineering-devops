@@ -1,0 +1,17 @@
+https://drive.google.com/file/d/1U83fGk5dvS_jo4EpuJm30Cz1hHcjtqdx/view?usp=sharing
+
+In this setup, firewalls are added for security. They control and monitor incoming and outgoing network traffic based on predetermined security rules. They help prevent unauthorized access and protect against various cyber threats.
+The SSL certificate is added to enable HTTPS. HTTPS encrypts the data transmitted between the user's browser and the web server, ensuring the confidentiality and integrity of the information exchanged.
+Monitoring is implemented to track system performance, identify issues, and ensure optimal operation. Monitoring clients, such as those for Sumo Logic, collect and analyze log and performance data to provide insights into system health.
+Monitoring tools collect data through agents or data collectors deployed on servers. They gather information on metrics, logs, and events, providing a comprehensive view of system behaviour. The data is then analyzed to generate reports and alerts.
+
+To monitor the web server QPS (Queries Per Second), you can set up monitoring tools to track the incoming request rate. This can include analyzing server logs, utilizing performance monitoring metrics, and setting up alerts based on predefined thresholds.
+
+Issues with the Infrastructure:
+Terminating SSL at the load balancer means that traffic between the load balancer and the backend servers is unencrypted. While this reduces computational load on backend servers, it exposes internal traffic to potential interception. End-to-end encryption is more secure.
+
+Single MySQL Server for Writes: Having only one MySQL server capable of accepting writes creates a single point of failure. If this server fails, the application may be unable to write data to the database, leading to service disruption.
+
+Uniform Servers: Using servers with identical components may lead to a lack of diversity and increased vulnerability. If a specific software or hardware component has a critical flaw, it can affect all servers simultaneously. Introducing diversity in components and configurations can enhance overall system resilience.
+
+https://drive.google.com/file/d/1U83fGk5dvS_jo4EpuJm30Cz1hHcjtqdx/view?usp=sharing

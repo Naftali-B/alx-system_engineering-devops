@@ -1,0 +1,12 @@
+https://drive.google.com/file/d/1L6fgUE_9dTmBC_1VWvCDEes5QIBdQjYt/view
+This setup has 2 servers- 1 web server (Nginx) with static files. It handles web requests from the load balancer and serves content from the files; 1 application server that runs the code/business logic that generates dynamic content, which is served to the load balancer as links to resources hosted on the web server.
+The load-balancer (HAproxy) is added to this setup to increase capacity handling, as it splits requests between the two servers handling tasks as explained above. So application and database are on one server and static files on another server (served by Nginx, in this example), with a load balancer in front of them. This setup is often employed to improve performance, scalability, and maintainability.
+
+The load balancer is configured with a round-robin distribution algorithm that evenly distributes incoming requests across the available servers in a circular sequence, in an Active-Active setup. In Active-Active, all servers are actively handling traffic simultaneously- remember the application cannot work alone without the files on the other server and likewise the files to be served from the other server are determined by the code logic residing in this server. This is in contrast to Active-Passive, where one set of servers (active) handles traffic, and the others (passive) only become active if the primary set fails.
+
+Issues with this Infrastructure is almost same as task 0: Single Point of Failure (SPOF):
+1. This setup is like each server hosts half of what the user needs. Failure of one half is like failure of everything.
+2. The load balancer itself could be a single point of failure. If it goes down, the entire system may become inaccessible. To address this, a redundant load balancing setup or failover mechanisms should be implemented. (Task 2 tries this)
+Security Issues: Lack of firewall protection exposes servers to potential security threats. Additionally, the absence of HTTPS leaves data transmission vulnerable to interception.
+And then, without monitoring, it's challenging to identify performance issues or potential failures in real-time. If files are not loading on the user's browser, sometimes it may take longer to identify if it's the application server or the web server that is having issues.
+https://drive.google.com/file/d/1L6fgUE_9dTmBC_1VWvCDEes5QIBdQjYt/view

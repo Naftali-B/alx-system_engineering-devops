@@ -1,0 +1,14 @@
+https://drive.google.com/file/d/1tT1FZXip3298GeBUDLXQymQJVvo0py3g/view?usp=sharing
+
+Best setup
+The new server is added to enhance scalability and distribute the workload. It contributes to the architecture's ability to handle increased traffic and provide redundancy.
+In this high-availability load-balancing setup, each load balancer is connected to all relevant servers. This connectivity ensures redundancy and fault tolerance.
+Configuring HAproxy as a cluster ensures high availability and fault tolerance. If one load balancer fails, the other can seamlessly take over, preventing service interruptions.
+
+Component Split Across Servers: Separating web servers, application servers, and databases onto individual servers improves scalability, maintainability, and fault isolation. Each component can be individually scaled based on demand, and maintenance or updates can be performed more efficiently.
+
+Firewalls continue to play a crucial role in securing the infrastructure by controlling and monitoring traffic.
+SSL Certificate remains essential for encrypting data in transit and ensuring secure communication.
+Monitoring Clients, continue to provide insights into system health and performance.
+
+https://drive.google.com/file/d/1tT1FZXip3298GeBUDLXQymQJVvo0py3g/view?usp=sharing

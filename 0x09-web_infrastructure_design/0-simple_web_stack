@@ -1,3 +1,5 @@
+https://drive.google.com/file/d/1Rj5GgrJWWc23qNBVelymt2V9mU8Ca-Oi/view?usp=sharing
+
 The user wants to access the website www.foobar.com.
 
 The DNS (Domain Name System) translates the domain name to IP addresses 8.8.8.8
@@ -17,5 +19,4 @@ Issues with this Infrastructure:
 2. Downtime during Maintenance: When maintenance activities, such as deploying new code or making configuration changes, are required, the web server needs to be restarted. During this downtime, the website will be inaccessible to users.
 
 3. Limited Scalability: With only a single server, the infrastructure cannot handle a significant increase in incoming traffic. If the website experiences a surge in traffic, it may become slow or unresponsive, impacting the user experience.
-
-https://www.canva.com/design/DAFkNsLP60o/WTRPr1RkVhyw7S_jCwlOrw/view?utm_content=DAFkNsLP60o&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
+https://drive.google.com/file/d/1Rj5GgrJWWc23qNBVelymt2V9mU8Ca-Oi/view?usp=sharing

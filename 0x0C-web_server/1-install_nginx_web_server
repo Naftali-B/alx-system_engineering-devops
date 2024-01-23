@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# installs nginx
+# changes default webpage to print "Hello World!"
+
+apt-get -y update
+apt-get install -y nginx
+ufw allow 'Nginx HTTP'
+echo 'Hello World!' > /var/www/html/index.html
+service nginx restart

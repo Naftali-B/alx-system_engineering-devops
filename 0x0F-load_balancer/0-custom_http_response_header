@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+# configures server
+# installs Nginx with the following config:
+# - listens on port 80
+# - Returns "Hello world" when queried
+# - Configures /redirect_me to "301 Moved Permanently"
+# - Includes a custom 404 page"
+# - Contains a custom HTTP header named X-served-by
+# - value of custom HTTP head is hostname of current running server
+
+apt-get update
+apt-get install -y nginx
+
+sudo mkdir -p /var/www/html
+sudo touch /var/www/html/index.html
+echo "Hello world" > /var/www/html/index.html
+sudo touch /var/www/html/custom_404.html
+echo "custom not found page" > /var/www/html/custom_404.html
+
+# Quoting the hostname variable
+printf %s "server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    add_header X-Served-By '$HOSTNAME';
+    root /var/www/html;
+    index index.html index.htm;
+    location /redirect_me {
+        return 301 http://cuberule.com/;
+    }
+    error_page 404 /custom_404.html;
+    location /404 {
+        root /var/www/html;
+        internal;
+    }
+}" | sudo tee /etc/nginx/sites-available/custom_config > /dev/null
+
+# Creating a symbolic link to enable the custom configuration
+sudo ln -s /etc/nginx/sites-available/custom_config /etc/nginx/sites-enabled/
+
+sudo service nginx restart
+

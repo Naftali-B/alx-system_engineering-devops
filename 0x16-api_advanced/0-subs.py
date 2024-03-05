@@ -9,7 +9,7 @@ def number_of_subscribers(subreddit):
         return 0
     url = f'https://www.reddit.com/r/{subreddit}/about.json'
     res = requests.get(url,
-                      headers={'User-Agent': 'Particular-Demand377'}).json()
+                       headers={'User-Agent': 'Particular-Demand377'}).json()
     sub_count = 0
     if 'error' not in res.keys():
         sub_count = res.get('data').get('subscribers')
